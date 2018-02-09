@@ -36,9 +36,9 @@ public class LoginPage {
 
     public void loginFlow (LoginModel model) throws InterruptedException{
         userEmailField.clear();
-       // userEmailField.sendKeys(model.getEmailAddress());
+       userEmailField.sendKeys(model.getEmailAddress());
         passwordField.clear();
-       // passwordField.sendKeys(model.getPassword());
+       passwordField.sendKeys(model.getPassword());
         loginButton.click();
     }
 }
