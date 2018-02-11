@@ -33,6 +33,7 @@ public class LoginPage {
     private WebElement passwordField;
     @FindBy(how = How.XPATH, using = "//*[@id=\"login-box-cn\"]/form/div[4]/button")
     private WebElement loginButton;
+    @FindBy (how = How.XPATH. using = "")
 
     public void loginFlow (LoginModel model) throws InterruptedException{
         userEmailField.clear();
@@ -40,5 +41,8 @@ public class LoginPage {
         passwordField.clear();
        passwordField.sendKeys(model.getPassword());
         loginButton.click();
+    }
+    public String getLoginError(){
+        return loginError.getText();
     }
 }

@@ -14,6 +14,15 @@ public class LoginModel {
     private String emailAddress;
     private String password;
     private String errorMessage;
+    private boolean isValidCredentials;
+
+    public boolean isValidCredentials() {
+        return isValidCredentials;
+    }
+
+    public void setValidCredentials(boolean validCredentials) {
+        isValidCredentials = validCredentials;
+    }
 
     public String getEmailAddress() {
         return emailAddress;
